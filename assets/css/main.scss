@@ -41,3 +41,74 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+.project-callout {
+  margin: 1.5rem 0;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid #2f6f9f;
+  border-radius: 6px;
+  background: rgba(47, 111, 159, 0.1);
+}
+
+.project-callout h3 {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+
+.project-subtitle,
+.project-kicker {
+  margin-top: 0;
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.tag-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.8rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  color: var(--global-text-color);
+  background: var(--global-bg-color);
+  font-size: 0.72em;
+  line-height: 1.2;
+}
+
+.figure-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.figure-grid figure {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+}
+
+.figure-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure-grid figcaption {
+  margin-top: 0.65rem;
+  color: var(--global-text-color-light);
+  font-size: 0.78em;
+  line-height: 1.45;
+}
