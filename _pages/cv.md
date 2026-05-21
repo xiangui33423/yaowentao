@@ -32,3 +32,4 @@ redirect_from:
 - CV: [Download PDF]({{ '/files/yaowentao-cv.pdf' | relative_url }})
 - Email: [yaowentao1216@126.com](mailto:yaowentao1216@126.com)
 - GitHub: [xiangui33423](https://github.com/xiangui33423)
+- Zhihu: [you-shi-hou-55-70](https://www.zhihu.com/people/you-shi-hou-55-70/posts)

@@ -80,7 +80,7 @@ author:
   wikipedia        : # Username
   xing             : # Username
   youtube          : # Username
-  zhihu            : # Username
+  zhihu            : "https://www.zhihu.com/people/you-shi-hou-55-70/posts"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
@@ -151,6 +151,8 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://github.com/xiangui33423"
+    - "https://www.zhihu.com/people/you-shi-hou-55-70/posts"
 
 
 # Analytics
