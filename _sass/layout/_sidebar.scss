@@ -203,8 +203,27 @@
   white-space: normal;
   line-height: 1.35;
 
-  i {
+  i,
+  .author__affiliation-mark {
     float: left;
+  }
+
+  .author__affiliation-mark {
+    width: 1.45rem;
+    height: 1.45rem;
+    margin-top: 0.05em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    color: #2f6f9f;
+    background: rgba(47, 111, 159, 0.08);
+    font-size: 0.58rem;
+    font-weight: 700;
+    line-height: 1.45rem;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  i {
     margin-top: 0.2em;
   }
 

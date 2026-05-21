@@ -11,6 +11,7 @@
 {% assign author_bio = author.bio %}
 {% assign author_location = author.location %}
 {% assign author_employer = author.employer %}
+{% assign author_employer_title = author.employer_full | default: author.employer %}
 {% assign follow_label = "Follow" %}
 {% assign email_label = site.data.ui-text[site.locale].email_label | default: "Email" %}
 {% assign website_label = site.data.ui-text[site.locale].website_label | default: "Website" %}
@@ -20,6 +21,7 @@
   {% assign author_bio = author.bio_zh | default: author.bio %}
   {% assign author_location = author.location_zh | default: author.location %}
   {% assign author_employer = author.employer_zh | default: author.employer %}
+  {% assign author_employer_title = author.employer_zh_full | default: author.employer_full | default: author_employer %}
   {% assign follow_label = "关注" %}
   {% assign email_label = "邮箱" %}
   {% assign website_label = "网站" %}
@@ -50,7 +52,7 @@
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author_location }}</li>
       {% endif %}
       {% if author_employer %}
-        <li class="author__desktop author__affiliation"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i><span>{{ author_employer }}</span></li>
+        <li class="author__desktop author__affiliation" title="{{ author_employer_title | strip_html }}"><span class="author__affiliation-mark" aria-hidden="true">ICT</span><span>{{ author_employer }}</span></li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ website_label }}</a></li>
