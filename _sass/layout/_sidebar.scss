@@ -200,18 +200,8 @@
 }
 
 .sidebar .author__affiliation {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.45rem;
   white-space: normal;
   line-height: 1.35;
-
-  .author__affiliation-mark {
-    flex: 0 0 1.45rem;
-    width: 1.45rem;
-    height: 1.45rem;
-    margin-top: 0.05rem;
-  }
 
   i {
     float: left;
@@ -220,6 +210,7 @@
 
   span {
     display: block;
+    margin-left: 1.75em;
     overflow-wrap: anywhere;
   }
 }
