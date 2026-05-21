@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ICT">
+  <rect width="64" height="64" rx="10" fill="#ffffff"/>
+  <rect x="3" y="3" width="58" height="58" rx="8" fill="none" stroke="#2f6f9f" stroke-width="4"/>
+  <path d="M16 18h32M16 46h32M18 16v32M46 16v32" stroke="#2f6f9f" stroke-width="4" stroke-linecap="round"/>
+  <text x="32" y="37" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#2f6f9f">ICT</text>
+</svg>

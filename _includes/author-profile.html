@@ -52,7 +52,7 @@
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author_location }}</li>
       {% endif %}
       {% if author_employer %}
-        <li class="author__desktop author__affiliation" title="{{ author_employer_title | strip_html }}"><span class="author__affiliation-mark" aria-hidden="true">ICT</span><span>{{ author_employer }}</span></li>
+        <li class="author__affiliation" title="{{ author_employer_title | strip_html }}"><img class="author__affiliation-mark" src="{{ '/images/ict-mark.svg' | prepend: base_path }}" alt="" aria-hidden="true"><span>{{ author_employer }}</span></li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ website_label }}</a></li>
