@@ -1,0 +1,81 @@
+---
+layout: archive
+permalink: /blog/
+title: "Blog"
+lang: en
+alternate_url: /zh/blog/
+author_profile: true
+---
+
+{% include base_path %}
+{% include language-switch.html %}
+
+<p class="blog-intro">
+  Notes on systems research surveys, paper reading, and short research observations.
+</p>
+
+<div class="blog-category-grid">
+  <a class="blog-category-card" href="#survey">
+    <span class="blog-category-label">Surveys</span>
+    <span class="blog-category-note">Research-area notes and background studies</span>
+  </a>
+  <a class="blog-category-card" href="#paper-reading">
+    <span class="blog-category-label">Paper Reading</span>
+    <span class="blog-category-note">Paper reading notes</span>
+  </a>
+  <a class="blog-category-card" href="#thoughts">
+    <span class="blog-category-label">Notes</span>
+    <span class="blog-category-note">Short research thoughts</span>
+  </a>
+</div>
+
+<section class="blog-section" id="survey">
+  <h2>Surveys</h2>
+  <p class="blog-section-description">
+    Structured notes for understanding a research area, comparing systems, and finding open questions.
+  </p>
+  {% assign has_survey_posts = false %}
+  {% for post in site.posts %}
+    {% if post.blog_category == "survey" %}
+      {% assign has_survey_posts = true %}
+      {% include blog-post-card.html lang="en" %}
+    {% endif %}
+  {% endfor %}
+  {% unless has_survey_posts %}
+    <p class="blog-empty">No posts yet.</p>
+  {% endunless %}
+</section>
+
+<section class="blog-section" id="paper-reading">
+  <h2>Paper Reading</h2>
+  <p class="blog-section-description">
+    Reading notes that summarize problems, methods, experiments, and takeaways from papers.
+  </p>
+  {% assign has_paper_posts = false %}
+  {% for post in site.posts %}
+    {% if post.blog_category == "paper-reading" %}
+      {% assign has_paper_posts = true %}
+      {% include blog-post-card.html lang="en" %}
+    {% endif %}
+  {% endfor %}
+  {% unless has_paper_posts %}
+    <p class="blog-empty">No posts yet.</p>
+  {% endunless %}
+</section>
+
+<section class="blog-section" id="thoughts">
+  <h2>Notes</h2>
+  <p class="blog-section-description">
+    Short notes for ideas, questions, design tradeoffs, and research intuition.
+  </p>
+  {% assign has_thought_posts = false %}
+  {% for post in site.posts %}
+    {% if post.blog_category == "thoughts" %}
+      {% assign has_thought_posts = true %}
+      {% include blog-post-card.html lang="en" %}
+    {% endif %}
+  {% endfor %}
+  {% unless has_thought_posts %}
+    <p class="blog-empty">No posts yet.</p>
+  {% endunless %}
+</section>

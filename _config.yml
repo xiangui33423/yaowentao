@@ -13,6 +13,7 @@ title                    : "wentao yao"
 title_separator          : "-"
 name                     : &name "wentao yao"
 description              : &description "Academic portfolio of wentao yao, focused on CXL memory pooling, memory congestion, quantum computing compilation, and computer systems."   # Update this with a general description of your site, this is the default if not overridden by a page
+description_zh           : "姚文涛的个人学术主页，关注 CXL memory pooling、memory congestion、quantum computing compilation 和 computer systems。"
 url                      : https://xiangui33423.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "/yaowentao" # the subpath of your site, e.g. "/blog"
@@ -25,10 +26,14 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "wentao yao"
+  name_zh          : "姚文涛"
   pronouns         : # example: "she/her"  
   bio              : "Computer system and architecture."
+  bio_zh           : "计算机系统与体系结构。"
   location         : "China"
-  employer         : "Institute of Computing Technology, Chinese Academy of Sciences"
+  location_zh      : "中国"
+  employer         : "Institute of Computing Technology,<br>Chinese Academy of Sciences"
+  employer_zh      : "中国科学院<br>计算技术研究所"
   uri              : # URL
   email            : "yaowentao1216@126.com" 
 

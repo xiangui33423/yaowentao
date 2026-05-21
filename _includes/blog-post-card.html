@@ -1,0 +1,39 @@
+{% include base_path %}
+
+{% assign lang = include.lang | default: "en" %}
+{% if lang == "zh" %}
+  {% assign card_title = post.title_zh | default: post.title %}
+  {% assign card_excerpt = post.excerpt_zh | default: post.excerpt %}
+  {% assign date_label = "发布时间：" %}
+  {% assign date_format = "%Y-%m-%d" %}
+  {% assign link_label = "在知乎阅读" %}
+{% else %}
+  {% assign card_title = post.title_en | default: post.title %}
+  {% assign card_excerpt = post.excerpt_en | default: post.excerpt %}
+  {% assign date_label = "Published:" %}
+  {% assign date_format = "%B %-d, %Y" %}
+  {% assign link_label = "Read on Zhihu" %}
+{% endif %}
+
+<article class="blog-post-card">
+  <h3 class="blog-post-title">
+    {% if post.link %}
+      <a href="{{ post.link }}">{{ card_title }}</a>
+    {% else %}
+      <a href="{{ base_path }}{{ post.url }}">{{ card_title }}</a>
+    {% endif %}
+  </h3>
+
+  <p class="blog-post-date">
+    <strong>{{ date_label }}</strong>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+  </p>
+
+  {% if card_excerpt %}
+    <p class="blog-post-excerpt">{{ card_excerpt }}</p>
+  {% endif %}
+
+  {% if post.link %}
+    <a class="blog-post-link" href="{{ post.link }}">{{ link_label }}</a>
+  {% endif %}
+</article>

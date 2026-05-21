@@ -2,22 +2,25 @@
 layout: archive
 title: "CV"
 permalink: /cv/
+lang: en
+alternate_url: /zh/cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
+{% include language-switch.html %}
 
 ## Education
 
-- M.S., Institute of Computing Technology, Chinese Academy of Sciences, expected. Advisor: Prof. Ke Liu (刘珂).
+- M.S., Institute of Computing Technology, Chinese Academy of Sciences, expected. Advisor: Prof. Ke Liu.
 - B.S., Nanjing University of Posts and Telecommunications.
 
 ## Mentorship
 
-- Graduate advisor: Prof. Ke Liu (刘珂).
-- Huawei mentor: Zixuan Guan (管紫轩).
+- Graduate advisor: Prof. Ke Liu.
+- Huawei mentor: Zixuan Guan.
 
 ## Research Interests
 

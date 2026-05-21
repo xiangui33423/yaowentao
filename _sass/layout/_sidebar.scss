@@ -199,6 +199,22 @@
   }
 }
 
+.sidebar .author__affiliation {
+  white-space: normal;
+  line-height: 1.35;
+
+  i {
+    float: left;
+    margin-top: 0.2em;
+  }
+
+  span {
+    display: block;
+    margin-left: 1.75em;
+    overflow-wrap: anywhere;
+  }
+}
+
 .author__pronouns {
   margin: 0;
 

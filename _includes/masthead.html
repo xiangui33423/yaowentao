@@ -1,23 +1,50 @@
 {% include base_path %}
+{% assign nav_links = site.data.navigation.main %}
+{% assign home_url = "/" %}
+{% assign home_title = site.title %}
+{% if page.lang == "zh" %}
+  {% assign nav_links = site.data.navigation.main_zh %}
+  {% assign home_url = "/zh/" %}
+  {% assign home_title = site.author.name_zh | default: site.title %}
+{% endif %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == home_url or page.url == home_url | append: 'index.html' %}selected{% endif %}">
+            <a href="{{ home_url | prepend: base_path }}">{{ home_title }}</a>
           </li>
-          {% for link in site.data.navigation.main %}
+          {% for link in nav_links %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+            {% assign is_selected = false %}
+            {% if link.url == "/" or link.url == "/zh/" %}
+              {% if page.url == link.url or page.url == link.url | append: "index.html" %}
+                {% assign is_selected = true %}
+              {% endif %}
+            {% elsif page.url contains link.url %}
+              {% assign is_selected = true %}
+            {% endif %}
+            <li class="masthead__menu-item {% if is_selected %}selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+          {% if page.lang and page.alternate_url %}
+            {% if page.lang == "zh" %}
+              <li class="masthead__menu-item persist">
+                <a href="{{ page.alternate_url | prepend: base_path }}">英文</a>
+              </li>
+            {% else %}
+              <li class="masthead__menu-item persist">
+                <a href="{{ page.alternate_url | prepend: base_path }}">Chinese</a>
+              </li>
+            {% endif %}
+          {% endif %}
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>

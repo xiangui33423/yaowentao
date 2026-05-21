@@ -1,13 +1,17 @@
 ---
 permalink: /
 title: "wentao yao"
+lang: en
+alternate_url: /zh/
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a fourth-year undergraduate student at Nanjing University of Posts and Telecommunications. I will pursue a master's degree at the Institute of Computing Technology, Chinese Academy of Sciences, with joint training at Huawei. My graduate advisor is Prof. Ke Liu (刘珂), and my Huawei mentor is Zixuan Guan (管紫轩).
+{% include language-switch.html %}
+
+I am a fourth-year undergraduate student at Nanjing University of Posts and Telecommunications. I will pursue a master's degree at the Institute of Computing Technology, Chinese Academy of Sciences, with joint training at Huawei. My graduate advisor is Prof. Ke Liu, and my Huawei mentor is Zixuan Guan.
 
 My research interests are in computer systems and architecture, with a current focus on CXL memory pooling, memory congestion, next-generation interconnection systems, AI accelerators, computer networks, and quantum computing compilation.
 

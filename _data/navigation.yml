@@ -13,9 +13,25 @@ main:
 
   - title: "Research"
     url: /portfolio/
+
+  - title: "Blog"
+    url: /blog/
         
   - title: "CV"
     url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/
+
+main_zh:
+  - title: "关于"
+    url: /zh/
+
+  - title: "研究"
+    url: /zh/portfolio/
+
+  - title: "博客"
+    url: /zh/blog/
+
+  - title: "简历"
+    url: /zh/cv/

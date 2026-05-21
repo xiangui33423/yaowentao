@@ -4,7 +4,7 @@
     "email": "yaowentao1216@126.com",
     "phone": "",
     "website": "https://xiangui33423.github.io/yaowentao",
-    "summary": "Computer system and architecture. Graduate advisor: Prof. Ke Liu (刘珂). Huawei mentor: Zixuan Guan (管紫轩).",
+    "summary": "Computer system and architecture. Graduate advisor: Prof. Ke Liu. Huawei mentor: Zixuan Guan.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -29,7 +29,7 @@
   "education": [
     {
       "institution": "Institute of Computing Technology, Chinese Academy of Sciences",
-      "area": "Computer Systems; advisor: Prof. Ke Liu (刘珂)",
+      "area": "Computer Systems; advisor: Prof. Ke Liu",
       "studyType": "M.S.",
       "startDate": "",
       "endDate": "Expected",

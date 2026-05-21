@@ -1,0 +1,15 @@
+{% include base_path %}
+
+{% if page.lang and page.alternate_url %}
+{% if page.lang == "zh" %}
+<nav class="language-switch" aria-label="语言切换">
+<a href="{{ page.alternate_url | prepend: base_path }}">英文</a>
+<span>中文</span>
+</nav>
+{% else %}
+<nav class="language-switch" aria-label="Language switch">
+<span>English</span>
+<a href="{{ page.alternate_url | prepend: base_path }}">Chinese</a>
+</nav>
+{% endif %}
+{% endif %}

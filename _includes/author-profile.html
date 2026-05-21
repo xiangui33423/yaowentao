@@ -3,38 +3,60 @@
 {% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
+{% assign is_zh = false %}
+{% if page.lang == "zh" %}
+  {% assign is_zh = true %}
+{% endif %}
+{% assign author_name = author.name %}
+{% assign author_bio = author.bio %}
+{% assign author_location = author.location %}
+{% assign author_employer = author.employer %}
+{% assign follow_label = "Follow" %}
+{% assign email_label = site.data.ui-text[site.locale].email_label | default: "Email" %}
+{% assign website_label = site.data.ui-text[site.locale].website_label | default: "Website" %}
+{% assign zhihu_label = "Zhihu" %}
+{% if is_zh %}
+  {% assign author_name = author.name_zh | default: author.name %}
+  {% assign author_bio = author.bio_zh | default: author.bio %}
+  {% assign author_location = author.location_zh | default: author.location %}
+  {% assign author_employer = author.employer_zh | default: author.employer %}
+  {% assign follow_label = "关注" %}
+  {% assign email_label = "邮箱" %}
+  {% assign website_label = "网站" %}
+  {% assign zhihu_label = "知乎" %}
+{% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    	<img src="{{ author.avatar }}" alt="{{ author_name }}"  fetchpriority="high" />
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author_name }}"  fetchpriority="high" />
     {% endif %}
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <h3 class="author__name">{{ author_name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author_bio %}<p class="author__bio">{{ author_bio }}</p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse">{{ follow_label }}</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
-      {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+      {% if author_location %}
+        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author_location }}</li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+      {% if author_employer %}
+        <li class="author__desktop author__affiliation"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i><span>{{ author_employer }}</span></li>
       {% endif %}
       {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
+        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ website_label }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ email_label }}</a></li>
       {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
@@ -87,6 +109,14 @@
       {% endif %}      
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+      {% endif %}
+      {% if author.zhihu %}
+        {% if author.zhihu contains "://" %}
+          {% assign zhihu_url = author.zhihu %}
+        {% else %}
+          {% assign zhihu_url = author.zhihu | prepend: "https://www.zhihu.com/people/" %}
+        {% endif %}
+        <li><a href="{{ zhihu_url }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>{{ zhihu_label }}</a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
@@ -168,14 +198,6 @@
       {% if author.youtube %}
         <li><a href="https://www.youtube.com/@{{ author.youtube }}"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
       {% endif %}
-      {% if author.zhihu %}
-        {% if author.zhihu contains "://" %}
-          {% assign zhihu_url = author.zhihu %}
-        {% else %}
-          {% assign zhihu_url = author.zhihu | prepend: "https://www.zhihu.com/people/" %}
-        {% endif %}
-      <li><a href="{{ zhihu_url }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
-      {% endif %}      
     </ul>
   </div>
 </div>

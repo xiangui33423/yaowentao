@@ -1,10 +1,28 @@
 {% include base_path %}
+{% assign is_zh = false %}
+{% if page.lang == "zh" %}
+  {% assign is_zh = true %}
+{% endif %}
+{% assign follow_label = site.data.ui-text[site.locale].follow_label | default: "Follow:" %}
+{% assign feed_label = site.data.ui-text[site.locale].feed_label | default: "Feed" %}
+{% assign powered_by = site.data.ui-text[site.locale].powered_by | default: "Powered by" %}
+{% assign updated_label = "Site last updated" %}
+{% assign sitemap_label = site.data.ui-text[site.locale].site_map | default: "Sitemap" %}
+{% assign copyright_name = site.name | default: site.title %}
+{% if is_zh %}
+  {% assign follow_label = "关注：" %}
+  {% assign feed_label = "订阅" %}
+  {% assign powered_by = "技术支持：" %}
+  {% assign updated_label = "站点最后更新" %}
+  {% assign sitemap_label = "站点地图" %}
+  {% assign copyright_name = site.author.name_zh | default: copyright_name %}
+{% endif %}
 
 {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
 <div class="page__footer-follow">
   <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% if follow_label %}
+      <li><strong>{{ follow_label }}</strong></li>
     {% endif %}
     {% if site.author.github %}
       <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
@@ -13,13 +31,17 @@
       <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
     {% endif %}
     {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ feed_label }}</a></li>
     {% endif %}
   </ul>
 </div>
 {% endif %}
 
 <div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated {{ "now" | date: '%Y-%m-%d' }}, <a href="/sitemap/" style="text-transform: uppercase;">{{ site.data.ui-text[site.locale].site_map | default: "Sitemap" }}</a>
+  {% if is_zh %}
+  &copy; {{ site.time | date: '%Y' }} {{ copyright_name }}，{{ powered_by }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> 与 <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>，基于 <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>。<br />
+  {% else %}
+  &copy; {{ site.time | date: '%Y' }} {{ copyright_name }}, {{ powered_by }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  {% endif %}
+  {{ updated_label }} {{ "now" | date: '%Y-%m-%d' }}, <a href="{{ base_path }}/sitemap/" style="text-transform: uppercase;">{{ sitemap_label }}</a>
 </div>

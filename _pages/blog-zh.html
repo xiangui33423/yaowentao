@@ -1,0 +1,83 @@
+---
+layout: archive
+permalink: /zh/blog/
+title: "博客"
+lang: zh
+alternate_url: /blog/
+author_profile: true
+redirect_from:
+  - /blog-zh/
+---
+
+{% include base_path %}
+{% include language-switch.html %}
+
+<p class="blog-intro">
+  这里整理 systems research 的调研、论文阅读和一些阶段性小思考。
+</p>
+
+<div class="blog-category-grid">
+  <a class="blog-category-card" href="#survey">
+    <span class="blog-category-label">调研</span>
+    <span class="blog-category-note">围绕研究方向的背景梳理和问题整理</span>
+  </a>
+  <a class="blog-category-card" href="#paper-reading">
+    <span class="blog-category-label">论文阅读</span>
+    <span class="blog-category-note">记录论文的问题、方法、实验和启发</span>
+  </a>
+  <a class="blog-category-card" href="#thoughts">
+    <span class="blog-category-label">小思考</span>
+    <span class="blog-category-note">记录一些研究直觉、设计取舍和阶段性想法</span>
+  </a>
+</div>
+
+<section class="blog-section" id="survey">
+  <h2>调研</h2>
+  <p class="blog-section-description">
+    用于理解一个研究方向、比较相关系统、寻找 open questions 的结构化笔记。
+  </p>
+  {% assign has_survey_posts = false %}
+  {% for post in site.posts %}
+    {% if post.blog_category == "survey" %}
+      {% assign has_survey_posts = true %}
+      {% include blog-post-card.html lang="zh" %}
+    {% endif %}
+  {% endfor %}
+  {% unless has_survey_posts %}
+    <p class="blog-empty">暂无文章。</p>
+  {% endunless %}
+</section>
+
+<section class="blog-section" id="paper-reading">
+  <h2>论文阅读</h2>
+  <p class="blog-section-description">
+    记录论文的 research problem、核心方法、实验设计和主要 takeaway。
+  </p>
+  {% assign has_paper_posts = false %}
+  {% for post in site.posts %}
+    {% if post.blog_category == "paper-reading" %}
+      {% assign has_paper_posts = true %}
+      {% include blog-post-card.html lang="zh" %}
+    {% endif %}
+  {% endfor %}
+  {% unless has_paper_posts %}
+    <p class="blog-empty">暂无文章。</p>
+  {% endunless %}
+</section>
+
+<section class="blog-section" id="thoughts">
+  <h2>小思考</h2>
+  <p class="blog-section-description">
+    记录一些关于 computer systems、computer architecture 和性能分析的短想法。
+  </p>
+  {% assign has_thought_posts = false %}
+  {% for post in site.posts %}
+    {% if post.blog_category == "thoughts" %}
+      {% assign has_thought_posts = true %}
+      {% include blog-post-card.html lang="zh" %}
+    {% endif %}
+  {% endfor %}
+  {% unless has_thought_posts %}
+    <p class="blog-empty">暂无文章。</p>
+  {% endunless %}
+</section>

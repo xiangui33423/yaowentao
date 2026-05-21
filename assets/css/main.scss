@@ -112,3 +112,134 @@
   font-size: 0.78em;
   line-height: 1.45;
 }
+
+.blog-intro {
+  max-width: 42rem;
+  color: var(--global-text-color);
+}
+
+.language-switch,
+.blog-language-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.85rem 0 1.35rem;
+  font-size: 0.82em;
+}
+
+.language-switch a,
+.language-switch span,
+.blog-language-switch a,
+.blog-language-switch span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  text-decoration: none !important;
+}
+
+.language-switch span,
+.blog-language-switch span {
+  color: #fff;
+  border-color: #2f6f9f;
+  background: #2f6f9f;
+}
+
+.blog-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.blog-category-card {
+  display: block;
+  min-height: 5rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid #2f6f9f;
+  border-radius: 6px;
+  color: inherit;
+  background: var(--global-bg-color);
+  text-decoration: none !important;
+}
+
+.blog-category-card:hover {
+  border-left-color: var(--global-link-color);
+  text-decoration: none !important;
+}
+
+.blog-category-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.blog-category-note,
+.blog-section-description,
+.blog-empty {
+  color: var(--global-text-color-light);
+}
+
+.blog-category-note {
+  display: block;
+  font-size: 0.78em;
+  line-height: 1.35;
+}
+
+.blog-section {
+  margin-top: 2rem;
+}
+
+.blog-section h2 {
+  margin-top: 0;
+}
+
+.blog-section-description {
+  margin-top: -0.2rem;
+  font-size: 0.88em;
+}
+
+.blog-empty {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px dashed var(--global-border-color);
+  border-radius: 6px;
+  background: rgba(47, 111, 159, 0.06);
+  font-size: 0.88em;
+}
+
+.blog-post-card {
+  margin: 1rem 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+}
+
+.blog-post-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.blog-post-date {
+  margin: 0 0 0.55rem;
+  color: var(--global-text-color-light);
+  font-size: 0.78em;
+}
+
+.blog-post-excerpt {
+  margin: 0 0 0.75rem;
+  color: var(--global-text-color);
+  font-size: 0.9em;
+  line-height: 1.55;
+}
+
+.blog-post-link {
+  font-size: 0.82em;
+  font-weight: 700;
+}
