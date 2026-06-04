@@ -9,6 +9,10 @@
 {% assign updated_label = "Site last updated" %}
 {% assign sitemap_label = site.data.ui-text[site.locale].site_map | default: "Sitemap" %}
 {% assign copyright_name = site.name | default: site.title %}
+{% assign stats_label = "Visit statistics" %}
+{% assign visitors_label = "Visitors" %}
+{% assign site_views_label = "Site views" %}
+{% assign page_views_label = "Page views" %}
 {% if is_zh %}
   {% assign follow_label = "关注：" %}
   {% assign feed_label = "订阅" %}
@@ -16,6 +20,10 @@
   {% assign updated_label = "站点最后更新" %}
   {% assign sitemap_label = "站点地图" %}
   {% assign copyright_name = site.author.name_zh | default: copyright_name %}
+  {% assign stats_label = "访问统计" %}
+  {% assign visitors_label = "访客数" %}
+  {% assign site_views_label = "总访问量" %}
+  {% assign page_views_label = "本页访问量" %}
 {% endif %}
 
 {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
@@ -36,6 +44,18 @@
   </ul>
 </div>
 {% endif %}
+
+<div class="site-stats" aria-label="{{ stats_label }}">
+  <span id="busuanzi_container_site_uv" class="site-stats__item">
+    {{ visitors_label }} <span id="busuanzi_value_site_uv">--</span>
+  </span>
+  <span id="busuanzi_container_site_pv" class="site-stats__item">
+    {{ site_views_label }} <span id="busuanzi_value_site_pv">--</span>
+  </span>
+  <span id="busuanzi_container_page_pv" class="site-stats__item">
+    {{ page_views_label }} <span id="busuanzi_value_page_pv">--</span>
+  </span>
+</div>
 
 <div class="page__footer-copyright">
   {% if is_zh %}

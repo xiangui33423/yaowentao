@@ -243,3 +243,17 @@
   font-size: 0.82em;
   font-weight: 700;
 }
+
+.site-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin: 0.6rem 0 0.35rem;
+  color: var(--global-text-color-light);
+  font-size: 0.72em;
+  line-height: 1.4;
+}
+
+.site-stats__item {
+  white-space: nowrap;
+}
