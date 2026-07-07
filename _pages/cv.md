@@ -19,7 +19,8 @@ redirect_from:
 
 ## Experience
 
-- **Remote Research Intern**, Synthesys Lab, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026. Advisor: Prof. Jian Weng.
+- **Remote Research Intern**, Synthesys Lab, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026.  
+  Advisor: Prof. Jian Weng.
 
 ## Mentorship
 
