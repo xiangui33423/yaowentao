@@ -17,6 +17,10 @@ redirect_from:
 - M.S., Institute of Computing Technology, Chinese Academy of Sciences, expected. Advisor: Prof. Ke Liu.
 - B.S., Nanjing University of Posts and Telecommunications.
 
+## Experience
+
+- **Remote Research Intern**, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026. Advisor: Prof. Jian Weng.
+
 ## Mentorship
 
 - Graduate advisor: Prof. Ke Liu.
