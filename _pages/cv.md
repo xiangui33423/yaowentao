@@ -14,12 +14,12 @@ redirect_from:
 
 ## Education
 
-- <img src="{{ '/images/ict-mark.svg' | relative_url }}" alt="ICT" style="height:1em; vertical-align:middle;"> M.S., Institute of Computing Technology, Chinese Academy of Sciences, 2026 – present. Advisor: Prof. Ke Liu.
-- <img src="{{ '/images/njupt-logo.png' | relative_url }}" alt="NJUPT" style="height:1em; vertical-align:middle;"> B.S., Nanjing University of Posts and Telecommunications, 2022 – 2026.
+- M.S., Institute of Computing Technology, Chinese Academy of Sciences, 2026 – present. Advisor: Prof. Ke Liu.
+- B.S., Nanjing University of Posts and Telecommunications, 2022 – 2026.
 
 ## Experience
 
-- <img src="{{ '/images/kaust-logo.png' | relative_url }}" alt="KAUST" style="height:1em; vertical-align:middle;"> **Remote Research Intern**, Synthesys Lab, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026.  
+- **Remote Research Intern**, Synthesys Lab, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026.  
   Advisor: Prof. Jian Weng.
 
 ## Mentorship

@@ -12,12 +12,12 @@ author_profile: true
 
 ## 教育经历
 
-- <img src="{{ '/images/ict-mark.svg' | relative_url }}" alt="ICT" style="height:1em; vertical-align:middle;"> 硕士，中国科学院计算技术研究所，2026年至今。导师：刘珂教授。
-- <img src="{{ '/images/njupt-logo.png' | relative_url }}" alt="NJUPT" style="height:1em; vertical-align:middle;"> 本科，南京邮电大学，2022年 – 2026年。
+- 硕士，中国科学院计算技术研究所，2026年至今。导师：刘珂教授。
+- 本科，南京邮电大学，2022年 – 2026年。
 
 ## 实习经历
 
-- <img src="{{ '/images/kaust-logo.png' | relative_url }}" alt="KAUST" style="height:1em; vertical-align:middle;"> **远程研究实习生**, Synthesys Lab, 阿卜杜拉国王科技大学 (KAUST), 2025年9月 – 2026年2月.  
+- **远程研究实习生**, Synthesys Lab, 阿卜杜拉国王科技大学 (KAUST), 2025年9月 – 2026年2月.  
   导师: 翁建教授.
 
 ## 导师
