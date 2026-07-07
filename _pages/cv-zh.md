@@ -31,7 +31,7 @@ author_profile: true
 - Memory congestion 和 memory-system scheduling
 - Computer architecture 和下一代互连系统
 - AI accelerators 和 computer networks
-- Quantum computing compilation
+- LLM KVCache 管理和优化
 
 ## 联系方式
 

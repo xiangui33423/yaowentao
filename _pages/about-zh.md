@@ -10,7 +10,7 @@ author_profile: true
 
 我是中国科学院计算技术研究所一年级硕士研究生，在华为进行联合培养。我的研究生导师是刘珂教授，华为导师是管紫轩。
 
-我的研究兴趣集中在 computer systems and architecture，目前关注 CXL memory pooling、memory congestion、下一代互连系统、AI accelerators、computer networks 和 quantum computing compilation。
+我的研究兴趣集中在 computer systems and architecture，目前关注 CXL memory pooling、memory congestion、下一代互连系统、AI accelerators、computer networks 和 LLM KVCache 管理与优化。
 
 [下载简历]({{ '/files/yaowentao-cv.pdf' | relative_url }})
 
@@ -49,7 +49,7 @@ author_profile: true
 - CXL pooling 的 memory systems：理解 shared and disaggregated memory 中的 congestion、interference 和 resource placement。
 - 面向 LLMs 的 accelerator architecture：探索 chiplet-level memory organization、data movement 和面向 Transformer workloads 的 AI coprocessor 支持。
 - Programmable networking：基于 P4-style data planes 原型化 packet-processing 和 forwarding mechanisms。
-- Quantum computing compilation：研究硬件资源约束下的 quantum circuit mapping 和 scheduling techniques。
+- LLM KVCache 系统：研究 KVCache 传输、管理与优化，以及分布式 KVCache serving 系统。
 
 ## 开源贡献
 

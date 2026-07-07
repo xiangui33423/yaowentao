@@ -33,7 +33,7 @@ redirect_from:
 - Memory congestion and memory-system scheduling
 - Computer architecture and next-generation interconnection systems
 - AI accelerators and computer networks
-- Quantum computing compilation
+- LLM KVCache management and optimization
 
 ## Contact
 

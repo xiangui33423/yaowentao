@@ -13,7 +13,7 @@ redirect_from:
 
 I am a first-year master's student at the Institute of Computing Technology, Chinese Academy of Sciences, with joint training at Huawei. My graduate advisor is Prof. Ke Liu, and my Huawei mentor is Zixuan Guan.
 
-My research interests are in computer systems and architecture, with a current focus on CXL memory pooling, memory congestion, next-generation interconnection systems, AI accelerators, computer networks, and quantum computing compilation.
+My research interests are in computer systems and architecture, with a current focus on CXL memory pooling, memory congestion, next-generation interconnection systems, AI accelerators, computer networks, and LLM KVCache management and optimization.
 
 [Download CV]({{ '/files/yaowentao-cv.pdf' | relative_url }})
 
@@ -52,7 +52,7 @@ My research interests are in computer systems and architecture, with a current f
 - Memory systems for CXL pooling: understanding congestion, interference, and resource placement in shared and disaggregated memory.
 - Accelerator architecture for LLMs: exploring chiplet-level memory organization, data movement, and AI coprocessor support for Transformer workloads.
 - Programmable networking: prototyping packet-processing and forwarding mechanisms with P4-style data planes.
-- Quantum computing compilation: studying mapping and scheduling techniques for quantum circuits under hardware resource constraints.
+- LLM KVCache systems: studying KVCache transfer, management, and optimization, as well as distributed KVCache serving systems.
 
 ## Open Source Contributions
 
