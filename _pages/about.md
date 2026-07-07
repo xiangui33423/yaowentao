@@ -11,7 +11,7 @@ redirect_from:
 
 {% include language-switch.html %}
 
-I am a fourth-year undergraduate student at Nanjing University of Posts and Telecommunications. I will pursue a master's degree at the Institute of Computing Technology, Chinese Academy of Sciences, with joint training at Huawei. My graduate advisor is Prof. Ke Liu, and my Huawei mentor is Zixuan Guan.
+I am a first-year master's student at the Institute of Computing Technology, Chinese Academy of Sciences, with joint training at Huawei. My graduate advisor is Prof. Ke Liu, and my Huawei mentor is Zixuan Guan.
 
 My research interests are in computer systems and architecture, with a current focus on CXL memory pooling, memory congestion, next-generation interconnection systems, AI accelerators, computer networks, and quantum computing compilation.
 

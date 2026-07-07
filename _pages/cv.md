@@ -14,8 +14,8 @@ redirect_from:
 
 ## Education
 
-- <img src="{{ '/images/ict-mark.svg' | relative_url }}" alt="ICT" style="height:1em; vertical-align:middle;"> M.S., Institute of Computing Technology, Chinese Academy of Sciences, expected. Advisor: Prof. Ke Liu.
-- <img src="{{ '/images/njupt-logo.png' | relative_url }}" alt="NJUPT" style="height:1em; vertical-align:middle;"> B.S., Nanjing University of Posts and Telecommunications.
+- <img src="{{ '/images/ict-mark.svg' | relative_url }}" alt="ICT" style="height:1em; vertical-align:middle;"> M.S., Institute of Computing Technology, Chinese Academy of Sciences, 2026 – present. Advisor: Prof. Ke Liu.
+- <img src="{{ '/images/njupt-logo.png' | relative_url }}" alt="NJUPT" style="height:1em; vertical-align:middle;"> B.S., Nanjing University of Posts and Telecommunications, 2022 – 2026.
 
 ## Experience
 

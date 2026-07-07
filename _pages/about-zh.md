@@ -8,7 +8,7 @@ author_profile: true
 
 {% include language-switch.html %}
 
-我是南京邮电大学四年级本科生，即将前往中国科学院计算技术研究所攻读硕士学位，并在华为进行联合培养。我的研究生导师是刘珂教授，华为导师是管紫轩。
+我是中国科学院计算技术研究所一年级硕士研究生，在华为进行联合培养。我的研究生导师是刘珂教授，华为导师是管紫轩。
 
 我的研究兴趣集中在 computer systems and architecture，目前关注 CXL memory pooling、memory congestion、下一代互连系统、AI accelerators、computer networks 和 quantum computing compilation。
 
