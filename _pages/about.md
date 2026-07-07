@@ -53,3 +53,10 @@ My research interests are in computer systems and architecture, with a current f
 - Accelerator architecture for LLMs: exploring chiplet-level memory organization, data movement, and AI coprocessor support for Transformer workloads.
 - Programmable networking: prototyping packet-processing and forwarding mechanisms with P4-style data planes.
 - Quantum computing compilation: studying mapping and scheduling techniques for quantum circuits under hardware resource constraints.
+
+## Open Source Contributions
+
+I have contributed to the [Mooncake](https://github.com/kvcache-ai/Mooncake) open-source project. Mooncake is a KVCache-centric serving system for large language model inference, focusing on high-performance KV cache transfer and distributed KV cache management.
+
+I have merged 2 Pull Requests into the main branch: [#2691](https://github.com/kvcache-ai/Mooncake/pull/2691) and [#2754](https://github.com/kvcache-ai/Mooncake/pull/2754). The contributions primarily focus on GPU device management in the Transfer Engine and correctness of multi-GPU NVLink/MNNVL communication.
+

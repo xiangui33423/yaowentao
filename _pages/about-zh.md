@@ -50,3 +50,10 @@ author_profile: true
 - 面向 LLMs 的 accelerator architecture：探索 chiplet-level memory organization、data movement 和面向 Transformer workloads 的 AI coprocessor 支持。
 - Programmable networking：基于 P4-style data planes 原型化 packet-processing 和 forwarding mechanisms。
 - Quantum computing compilation：研究硬件资源约束下的 quantum circuit mapping 和 scheduling techniques。
+
+## 开源贡献
+
+我参与了 [Mooncake](https://github.com/kvcache-ai/Mooncake) 开源项目的贡献。Mooncake 是一个面向大模型推理的 KVCache-centric serving 系统，关注高性能 KV cache 传输与分布式 KV cache 管理。
+
+我已向 Mooncake 主分支合并 2 个 Pull Request：[#2691](https://github.com/kvcache-ai/Mooncake/pull/2691) 和 [#2754](https://github.com/kvcache-ai/Mooncake/pull/2754)。相关工作主要集中在 Transfer Engine 中的 GPU device 管理与多 GPU NVLink/MNNVL 通信正确性。
+
