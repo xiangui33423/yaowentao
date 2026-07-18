@@ -34,6 +34,13 @@ My research interests are in computer systems and architecture, with a current f
 </div>
 
 <div class="project-callout">
+  <h3>Mooncake Master Snapshot Refactoring</h3>
+  <p class="project-subtitle">KVCache-Centric Serving System Snapshot Subsystem Refactor</p>
+  <p>Around Mooncake Store RFC <a href="https://github.com/kvcache-ai/Mooncake/issues/2688">#2688</a>, I split master snapshot orchestration, repository operations, codec logic, and restore flow out of the monolithic <code>MasterService</code> through 4 merged PRs: <a href="https://github.com/kvcache-ai/Mooncake/pull/2805">#2805</a>, <a href="https://github.com/kvcache-ai/Mooncake/pull/2831">#2831</a>, <a href="https://github.com/kvcache-ai/Mooncake/pull/2879">#2879</a>, and <a href="https://github.com/kvcache-ai/Mooncake/pull/2943">#2943</a>. The refactor preserves the snapshot format, configuration, and external behavior while improving module boundaries, testability, and future format evolution.</p>
+  <p class="tag-row"><span>Mooncake</span><span>KVCache Serving</span><span>Snapshot/Restore</span><span>C++</span><span>System Refactoring</span></p>
+</div>
+
+<div class="project-callout">
   <h3>AI Coprocessor Accelerator for LLM Workloads</h3>
   <p class="project-subtitle">Transformer-Oriented Accelerator Design</p>
   <p>This project designs an AI coprocessor accelerator for LLM-oriented Transformer workloads. It explores hardware support for efficient matrix computation, data movement, and memory access patterns in neural-network inference acceleration.</p>
@@ -58,5 +65,11 @@ My research interests are in computer systems and architecture, with a current f
 
 I have contributed to the [Mooncake](https://github.com/kvcache-ai/Mooncake) open-source project. Mooncake is a KVCache-centric serving system for large language model inference, focusing on high-performance KV cache transfer and distributed KV cache management.
 
-I have merged 2 Pull Requests into the main branch: [#2691](https://github.com/kvcache-ai/Mooncake/pull/2691) and [#2754](https://github.com/kvcache-ai/Mooncake/pull/2754). The contributions primarily focus on GPU device management in the Transfer Engine and correctness of multi-GPU NVLink/MNNVL communication.
+I have merged 6 Pull Requests into the main branch: [#2691](https://github.com/kvcache-ai/Mooncake/pull/2691), [#2754](https://github.com/kvcache-ai/Mooncake/pull/2754), [#2805](https://github.com/kvcache-ai/Mooncake/pull/2805), [#2831](https://github.com/kvcache-ai/Mooncake/pull/2831), [#2879](https://github.com/kvcache-ai/Mooncake/pull/2879), and [#2943](https://github.com/kvcache-ai/Mooncake/pull/2943). My earlier contributions focused on GPU device management in the Transfer Engine and correctness of multi-GPU NVLink/MNNVL communication.
 
+Recently, I completed the Mooncake Store master snapshot subsystem refactor around RFC [#2688](https://github.com/kvcache-ai/Mooncake/issues/2688), split across four merged PRs:
+
+- [#2805](https://github.com/kvcache-ai/Mooncake/pull/2805): extracted `MasterSnapshotManager` and `MasterSnapshotRepository`, separating snapshot scheduling, child process lifecycle, and storage/catalog operations from `MasterService`.
+- [#2831](https://github.com/kvcache-ai/Mooncake/pull/2831): extracted `MasterSnapshotCodec` to own master snapshot encode/decode logic and added codec unit tests.
+- [#2879](https://github.com/kvcache-ai/Mooncake/pull/2879): refactored the snapshot restore path into a repository, codec, and service-apply three-phase architecture while preserving snapshot format and restore behavior compatibility.
+- [#2943](https://github.com/kvcache-ai/Mooncake/pull/2943): removed leftover wrapper methods after the refactor and documented the three-phase restore architecture.

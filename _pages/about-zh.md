@@ -31,6 +31,13 @@ author_profile: true
 </div>
 
 <div class="project-callout">
+  <h3>Mooncake Master Snapshot Refactoring</h3>
+  <p class="project-subtitle">KVCache-Centric Serving System Snapshot Subsystem Refactor</p>
+  <p>围绕 Mooncake Store 的 RFC <a href="https://github.com/kvcache-ai/Mooncake/issues/2688">#2688</a>，我将 master snapshot 的 orchestration、repository、codec 和 restore path 从 monolithic <code>MasterService</code> 中拆分出来，并通过 4 个已合并 PR 渐进式落地：<a href="https://github.com/kvcache-ai/Mooncake/pull/2805">#2805</a>、<a href="https://github.com/kvcache-ai/Mooncake/pull/2831">#2831</a>、<a href="https://github.com/kvcache-ai/Mooncake/pull/2879">#2879</a>、<a href="https://github.com/kvcache-ai/Mooncake/pull/2943">#2943</a>。该工作保持 snapshot format、配置和外部行为兼容，同时改善模块边界、测试性和后续格式演进空间。</p>
+  <p class="tag-row"><span>Mooncake</span><span>KVCache Serving</span><span>Snapshot/Restore</span><span>C++</span><span>System Refactoring</span></p>
+</div>
+
+<div class="project-callout">
   <h3>AI Coprocessor Accelerator for LLM Workloads</h3>
   <p class="project-subtitle">Transformer-Oriented Accelerator Design</p>
   <p>该项目面向 LLM-oriented Transformer workloads 设计 AI coprocessor accelerator，探索高效 matrix computation、data movement 和 memory access patterns 的硬件支持。</p>
@@ -55,5 +62,11 @@ author_profile: true
 
 我参与了 [Mooncake](https://github.com/kvcache-ai/Mooncake) 开源项目的贡献。Mooncake 是一个面向大模型推理的 KVCache-centric serving 系统，关注高性能 KV cache 传输与分布式 KV cache 管理。
 
-我已向 Mooncake 主分支合并 2 个 Pull Request：[#2691](https://github.com/kvcache-ai/Mooncake/pull/2691) 和 [#2754](https://github.com/kvcache-ai/Mooncake/pull/2754)。相关工作主要集中在 Transfer Engine 中的 GPU device 管理与多 GPU NVLink/MNNVL 通信正确性。
+我已向 Mooncake 主分支合并 6 个 Pull Request：[#2691](https://github.com/kvcache-ai/Mooncake/pull/2691)、[#2754](https://github.com/kvcache-ai/Mooncake/pull/2754)、[#2805](https://github.com/kvcache-ai/Mooncake/pull/2805)、[#2831](https://github.com/kvcache-ai/Mooncake/pull/2831)、[#2879](https://github.com/kvcache-ai/Mooncake/pull/2879) 和 [#2943](https://github.com/kvcache-ai/Mooncake/pull/2943)。早期工作主要集中在 Transfer Engine 中的 GPU device 管理与多 GPU NVLink/MNNVL 通信正确性。
 
+近期我围绕 RFC [#2688](https://github.com/kvcache-ai/Mooncake/issues/2688) 完成了 Mooncake Store master snapshot 子系统重构，并拆分为四个已合并 PR：
+
+- [#2805](https://github.com/kvcache-ai/Mooncake/pull/2805)：提取 `MasterSnapshotManager` 和 `MasterSnapshotRepository`，将 snapshot scheduling、child process lifecycle、storage/catalog operations 从 `MasterService` 中拆分。
+- [#2831](https://github.com/kvcache-ai/Mooncake/pull/2831)：提取 `MasterSnapshotCodec`，集中管理 master snapshot 的 encode/decode 逻辑，并补充 codec 单元测试。
+- [#2879](https://github.com/kvcache-ai/Mooncake/pull/2879)：将 snapshot restore path 重构为 repository、codec、service apply 三阶段架构，保持已有 snapshot format 与 restore behavior 兼容。
+- [#2943](https://github.com/kvcache-ai/Mooncake/pull/2943)：清理重构后的遗留 wrapper methods，并为三阶段 restore 架构补充文档。
