@@ -19,6 +19,7 @@ redirect_from:
 
 ## Experience
 
+- **Chip Architecture Intern**, Suanmiao Technology (算苗科技), July 2026 – present.
 - **Remote Research Intern**, Synthesys Lab, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026.  
   Advisor: Prof. Jian Weng.
 
