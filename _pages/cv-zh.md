@@ -36,6 +36,6 @@ author_profile: true
 ## 联系方式
 
 - 简历：[下载 PDF]({{ '/files/yaowentao-cv.pdf' | relative_url }})
-- 邮箱：[yaowentao1216@126.com](mailto:yaowentao1216@126.com)
+- 邮箱：[yaowentao26@mails.ucas.ac.cn](mailto:yaowentao26@mails.ucas.ac.cn)
 - GitHub：[xiangui33423](https://github.com/xiangui33423)
 - 知乎：[you-shi-hou-55-70](https://www.zhihu.com/people/you-shi-hou-55-70/posts)
