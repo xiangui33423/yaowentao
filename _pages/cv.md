@@ -19,7 +19,8 @@ redirect_from:
 
 ## Experience
 
-- **Chip Architecture Intern**, Suanmiao Technology (算苗科技), July 2026 – present.
+- **GPU Architecture Intern**, Muxi Technology Co., Ltd. (沐曦科技有限公司), September 2026 – present.
+- **Chip Architecture Intern**, Suanmiao Technology (算苗科技), June 2026 – September 2026.
 - **Remote Research Intern**, Synthesys Lab, King Abdullah University of Science and Technology (KAUST), September 2025 – February 2026.  
   Advisor: Prof. Jian Weng.
 
